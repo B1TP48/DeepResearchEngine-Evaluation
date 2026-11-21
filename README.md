@@ -1,4 +1,4 @@
-# Report rubric review
+# DeepResearchEngine Evaluation
 
 This repository holds research reports and the rubrics to grade them with. Each report
 answers one research request; each request has an expert-written rubric. Your task is to
