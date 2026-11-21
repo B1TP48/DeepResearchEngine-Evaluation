@@ -7,7 +7,7 @@ request (step 7); then report what you did in one short message.
 
 This repository holds research reports and the rubrics to grade them with. Each report
 answers one research request; each request has an expert-written rubric. Your task is to
-grade every report against its rubric, following [`RULES.md`](RULES.md), and to push only
+grade every report against its rubric, following [`RULES.md`](RULES.md), and to submit only
 your grades.
 
 ## What is here
