@@ -1,0 +1,137 @@
+{
+  "rubric_id": "Q3",
+  "criteria": [
+    {
+      "index": 1,
+      "criterion": "The response should provide explicit yearly revenue estimates for at least 5 consecutive years after U.S. market entry, with values expressed in realistic ranges and correct order of magnitude (e.g., tens of millions vs. billions). Figures should be specific (e.g., $20–30M) rather than vague, aligning with industry benchmarks and market context.",
+      "axis": "Explicit Criteria",
+      "weight": 5.0
+    },
+    {
+      "index": 2,
+      "criterion": "The response should clearly state at least 4 explicit numerical assumptions used to build the revenue estimates. Examples of valid assumptions include:\n1) Average deal size with Intel or other major clients (e.g., $2–5M per year)\n2) Expected market share captured in the U.S. within first 5 years (e.g., 2–3%)\n3) Growth rate in semiconductor slurry demand (e.g., 8–10% CAGR)\n4) Average price per liter/ton of slurry (e.g., $1,000–2,000 per ton)",
+      "axis": "Implicit Criteria",
+      "weight": 3.0
+    },
+    {
+      "index": 3,
+      "criterion": "The response should present at least 4 intermediate numerical calculations that clearly connect assumptions to the final revenue figures, without skipping steps. Examples of valid calculations include:\n1) Estimating number of client deals (e.g., 3 Intel contracts + 2 smaller fab contracts)\n2) Multiplying average deal size by number of deals (e.g., 5 × $3M = $15M)\n3) Adjusting revenue for cost overheads of procuring slurry materials (e.g., 30% cost margin)\n4) Comparing projected prices against competitors to account for undercutting (e.g., 10% price reduction → $2.7M instead of $3M per deal)",
+      "axis": "Explicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 4,
+      "criterion": "The response should cite or reference comparable data or benchmarks from KCTech’s Korean operations at least twice. Examples of valid benchmarks include:\n1) Average slurry deal size\n2) Historical revenue figures\n3) Typical customer concentration (e.g., % revenue from top 3 clients)\n4) Year-over-year revenue growth in Korea",
+      "axis": "Explicit Criteria",
+      "weight": 5.0
+    },
+    {
+      "index": 5,
+      "criterion": "The response should name at least four companies other than Intel as target customers for the U.S. branch. Representative examples include:\n1) TSMC (Arizona)\n2) Samsung Austin Semiconductor\n3) GlobalFoundries (New York, Vermont)\n4) Micron Technology (Idaho)",
+      "axis": "Explicit Criteria",
+      "weight": 5.0
+    },
+    {
+      "index": 6,
+      "criterion": "The response should provide competitor analysis by naming incumbent slurry suppliers active in the U.S. market.\nRepresentative competitor companies include:\n1) Cabot Microelectronics (CMC Materials)\n2) Fujimi Corporation\n3) DuPont Electronic Materials\n4) BASF\n\nRepresentative elements of competitor analysis include:\n1) Market share held by each supplier in the U.S.\n2) Pricing strategies and average slurry cost benchmarks\n3) Strength of customer relationships with major fabs (e.g., Intel, TSMC, Micron)\n4) Technological differentiation (e.g., particle size control, specialized slurries for advanced nodes)",
+      "axis": "Explicit Criteria",
+      "weight": 5.0
+    },
+    {
+      "index": 7,
+      "criterion": "The response should mention regional or national demand data by explicitly referencing at least 4 U.S. semiconductor manufacturing hubs. Representative regions include:\n1) Oregon (Intel's fabs)\n2) Arizona (TSMC fabs)\n3) Texas (Samsung Austin)\n4) New York (GlobalFoundries)\n\nThe demand data cited should include hard numerical ranges, such as:\n1) Dollar value of contracts (e.g., $5-10M per year for a single fab contract)\n2) Estimated number of contracts per year in each hub (e.g., 8-12 contracts)",
+      "axis": "Explicit Criteria",
+      "weight": 5.0
+    },
+    {
+      "index": 8,
+      "criterion": "The response should address the cost of opening a new U.S. branch by providing at least one numerical estimate, grounded in calculations of major cost factors. Representative cost factors include:\n1) Office space and facility setup (e.g., lease in Portland, $200K-$400K annually)\n2) Salaries for the initial team (CEO + 3 staff, e.g., $600K-$900K annually)\n3) Equipment, lab, and R&D setup (e.g., $1M-$2M one-time)\n4) Regulatory, legal, and administrative expenses (e.g., $100K-$250K annually)\nThe response should combine these into a clear estimated cost range (e.g., $2M-$3.5M for year one).",
+      "axis": "Explicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 9,
+      "criterion": "The response should list at least three tactics under the Conventional/Traditional customer-acquisition category. Representative examples include:\n1) Sending free product samples to prospective clients\n2) Leveraging existing personal/professional connections (e.g., former Intel colleagues)\n3) Attending semiconductor trade shows and conferences\n4) Direct sales outreach and relationship-building with procurement teams",
+      "axis": "Explicit Criteria",
+      "weight": 5.0
+    },
+    {
+      "index": 10,
+      "criterion": "The response should list at least three tactics under the Non-conventional/Unexpected customer-acquisition category. Representative examples include:\n1) Partnering with U.S. universities or research labs for early-stage slurry testing\n2) Running joint pilot projects with startups in semiconductor materials\n3) Using digital marketing or thought-leadership campaigns targeting fab engineers\n4) Offering unique financing/discount structures (e.g., pay-per-use slurry contracts)",
+      "axis": "Explicit Criteria",
+      "weight": 5.0
+    },
+    {
+      "index": 11,
+      "criterion": "The response should explicitly cite at least two sources in the Korean language. Representative examples of valid sources include:\n1) Korean investing/finance websites\n2) Government regulatory filings\n3) Korean semiconductor industry news outlets\n4) Company press releases in Korean",
+      "axis": "References & Citation Quality",
+      "weight": 1.0
+    },
+    {
+      "index": 12,
+      "criterion": "The response includes unnecessary references to post-COVID industry shifts, which are largely no longer relevant. The response mentions generic 'COVID impact' without tieing it to current, quantifiable 2024–2025 industry effects (e.g., ongoing supply chain bottlenecks or recovery metrics).",
+      "axis": "Implicit Criteria",
+      "weight": -1.0
+    },
+    {
+      "index": 13,
+      "criterion": "The response should provide confidence intervals (e.g., 95%) for every major numerical estimate, such as yearly revenue projections, market share assumptions, or cost estimates. The intervals should be expressed as ranges around the point estimate (e.g., projected revenue $20M with 95% CI: $18-22M).",
+      "axis": "Implicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 14,
+      "criterion": "The response should provide a SWOT analysis (or equivalent). At minimum, the Threats/Risks section must include at least 4 legitimate risks. Representative examples include:\n1) Aggressive pricing or entrenched relationships from incumbent slurry suppliers\n2) Supply chain vulnerabilities for critical raw materials\n3) Slow customer adoption due to qualification cycles in semiconductor fabs\n4) Regulatory or trade barriers affecting import of slurry materials into the U.S.",
+      "axis": "Synthesis of Information",
+      "weight": 2.0
+    },
+    {
+      "index": 15,
+      "criterion": "The response should use non-table charts at least once. Representative examples of valid non-table chart types include:\n1) Line charts (e.g., revenue growth over years)\n2) Bar charts (e.g., competitor market share comparison)\n3) Pie charts (e.g., regional demand breakdown)\n4) Scatter plots (e.g., deal size vs. number of contracts)",
+      "axis": "Communication Quality",
+      "weight": 2.0
+    },
+    {
+      "index": 16,
+      "criterion": "The response should reference KCTech’s existing global capabilities or limitations to justify its U.S. market strategy.\nGlobal capabilities = strengths the company already has from international operations (e.g., production scale, R&D expertise, established client relationships).\nGlobal limitations = constraints KCTech faces internationally (e.g., weaker brand recognition outside Korea, limited distribution channels, dependency on a few suppliers).\nMarket strategy = how these factors influence entry and growth in the U.S. (e.g., targeting Intel first, setting up in Portland, differentiating from competitors).\n\nRepresentative examples include:\n1) Strong R&D pipeline in advanced slurry formulations (capability)\n2) Limited brand awareness in the U.S. semiconductor ecosystem (limitation)\n3) Existing supply agreements with global clients like Samsung/GlobalFoundries (capability)\n4) Reliance on imported raw materials that could face U.S. trade restrictions (limitation)",
+      "axis": "Synthesis of Information",
+      "weight": 2.0
+    },
+    {
+      "index": 17,
+      "criterion": "The response should consider hiring and talent acquisition as a key cost for setting up the U.S. branch. It must provide at least one numerical estimate (in USD) and break this into major cost components. Representative examples include:\n1) Recruiter or headhunter fees (e.g., $20K-$50K per hire)\n2) Interviewing and onboarding expenses (e.g., $5K-$10K per employee)\n3) Salaries and benefits for initial team members (e.g., $150K-$250K annually for specialized researchers, $200K-$300K for leadership roles)\n4) Ongoing HR/administrative support costs (e.g., $50K-$100K annually)\nThe response should combine these factors into a clear estimated range (e.g., $800K-$1.2M annually for personnel-related expenses in the first year).",
+      "axis": "Implicit Criteria",
+      "weight": 5.0
+    },
+    {
+      "index": 18,
+      "criterion": "The response should consider the potential for additional employees to be moved to the U.S. branch once sufficient revenue is generated, as it helps inform both future costs (e.g., relocation, salaries, visas) and potential revenue growth (e.g., expanded sales coverage, more R&D capacity).",
+      "axis": "Implicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 19,
+      "criterion": "The response should build at least one statistical or mathematical model to support revenue forecasting. A model can be a formal formula, calculation framework, or forecasting approach. Representative examples include:\n1) Simple growth rate projection (e.g., 10% YoY revenue increase)\n2) Exponential moving average for smoothing yearly revenue estimates\n3) Linear regression using demand data and market size as predictors\n4) Market share–based formula (e.g., Total U.S. slurry market x % share captured)",
+      "axis": "Implicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 20,
+      "criterion": "The response should not incorrectly attribute non-KCTech work, data, or achievements to KCTech.\nRepresentative examples of incorrect attribution include:\n1) Claiming KCTech developed slurry products that were actually created by Cabot Microelectronics (CMC Materials).\n2) Attributing Intel's proprietary slurry R&D breakthroughs to KCTech.\n3) Presenting Samsung or TSMC in-house slurry formulations as if they were supplied by KCTech.\n4) Stating that KCTech currently holds U.S. market share figures that actually belong to competitors like DuPont or BASF.",
+      "axis": "References & Citation Quality",
+      "weight": -5.0
+    },
+    {
+      "index": 21,
+      "criterion": "Claims that KCTech USA Branch doesn't exist yet, and thus can't provide accurate information.",
+      "axis": "Synthesis of Information",
+      "weight": -5.0
+    },
+    {
+      "index": 22,
+      "criterion": "The response should cover potential difficulties the U.S. branch may face. Representative examples include:\n1) Lengthy qualification and validation cycles for slurry products at U.S. fabs (12-24 months before adoption).\n2) Intense competition and entrenched supplier relationships with incumbents (e.g., CMC Materials, DuPont).\n3) Regulatory or trade restrictions that could delay imports or increase costs.\n4) Challenges in recruiting specialized semiconductor materials talent in Portland and other hubs.",
+      "axis": "Implicit Criteria",
+      "weight": 2.0
+    }
+  ]
+}

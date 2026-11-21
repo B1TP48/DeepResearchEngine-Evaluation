@@ -1,0 +1,167 @@
+{
+  "rubric_id": "Q6",
+  "criteria": [
+    {
+      "index": 1,
+      "criterion": "The response discusses the limitations of the current infrastructure and the corresponding challenges with respect to the desired scale of up to 1 million users per day (e.g., single MySQL instance bottlenecks, lack of horizontal scaling in the web tier, no caching layer, limited observability/monitoring).",
+      "axis": "Implicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 2,
+      "criterion": "The response provides recommendations for alternative architectures that are beneficial for scalability (e.g., microservices architecture, cloud-managed databases, distributed caching systems, message queues/event streaming).",
+      "axis": "Explicit Criteria",
+      "weight": 5.0
+    },
+    {
+      "index": 3,
+      "criterion": "The response provides a high-level plan to transition from the original tech stack to the recommended one (e.g., phased rollout, data migration strategy, feature flags, a dual-writing period).",
+      "axis": "Explicit Criteria",
+      "weight": 5.0
+    },
+    {
+      "index": 4,
+      "criterion": "The response provides an analysis of the risks and benefits of the transition from the current tech stack to the recommended version (e.g., downtime during migration, data consistency issues, improved scalability, better fault tolerance).",
+      "axis": "Explicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 5,
+      "criterion": "The response considers factors and/or metrics that affect maintainability (e.g., centralized logging, system metrics/monitoring, distributed tracing, automated alerting).",
+      "axis": "Implicit Criteria",
+      "weight": 3.0
+    },
+    {
+      "index": 6,
+      "criterion": "The response makes suggestions that are not appropriate or feasible for a small startup to implement (e.g., designing a fully custom database engine, building proprietary networking hardware, running multiple on-premises data centers, developing an entirely in-house cloud platform).",
+      "axis": "Explicit Criteria",
+      "weight": -4.0
+    },
+    {
+      "index": 7,
+      "criterion": "The response includes at least one visual diagram (e.g., ASCII, Mermaid) or a clear, structured description demonstrating the organization of the recommended architecture.",
+      "axis": "Communication Quality",
+      "weight": 3.0
+    },
+    {
+      "index": 8,
+      "criterion": "The response provides a budget plan or cost analysis that considers the cost of the recommended components necessary to host 1M users/day (e.g., cloud provider fees for compute/database/storage, caching service costs, monitoring tool subscriptions, CDN bandwidth).",
+      "axis": "Implicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 9,
+      "criterion": "The response discusses the central role of an Application Programming Interface (API), noting its benefits for scalability (e.g., standardized communication between services, modularity, independent scaling of components) and outlines how API design fits into the transition plan.",
+      "axis": "Implicit Criteria",
+      "weight": 3.0
+    },
+    {
+      "index": 10,
+      "criterion": "The response discusses security factors relevant to the transition, including authentication, authorization, and encryption for the new tech stack.",
+      "axis": "Implicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 11,
+      "criterion": "The response provides calculations to demonstrate how the recommended system can accommodate 1M users/day (e.g., estimating QPS, storage needs, bandwidth requirements).",
+      "axis": "Communication Quality",
+      "weight": 3.0
+    },
+    {
+      "index": 12,
+      "criterion": "The response discusses global data privacy policies (e.g., EU's General Data Protection Regulation - GDPR, California Consumer Privacy Act - CCPA, China's Personal Information Protection Law - PIPL, Canada's Personal Information Protection and Electronic Documents Act - PIPEDA), and how the recommended system should comply with them.",
+      "axis": "Implicit Criteria",
+      "weight": 3.0
+    },
+    {
+      "index": 13,
+      "criterion": "The response includes an expected high-level timeline to implement concrete deliverables, along with estimated effort (e.g., man-hours or story points) and potential team assignments.",
+      "axis": "Explicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 14,
+      "criterion": "The response outlines a plan for managing technical debt in the future, including estimates for manpower, key concepts to target, and areas of most concern (e.g., allocating a percentage of sprint capacity, scheduling regular refactoring, focusing on core data models or API facades).",
+      "axis": "Implicit Criteria",
+      "weight": 3.0
+    },
+    {
+      "index": 15,
+      "criterion": "The response references at least one other similar technology and analyzes why their tech stack works and discusses its relevance to the current project (e.g., Twitter’s use of distributed caching, Facebook’s sharded MySQL and TAO system, LinkedIn’s Kafka-based event streaming, Instagram’s Django monolith with horizontal scaling).",
+      "axis": "Implicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 16,
+      "criterion": "The response discusses relevant DevOps factors (e.g., CI/CD pipelines, defining SLIs/SLOs, standardizing developer environments, establishing error budgets).",
+      "axis": "Implicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 17,
+      "criterion": "The response includes a plan for handling large traffic spikes or high scenarios that come with accomodating 1M users/day. ",
+      "axis": "Implicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 18,
+      "criterion": "The response provides a recommendation for a singular, specific database technology with justification on how it is appropriate for this startup (e.g., PostgreSQL with read replicas for relational integrity, MongoDB for flexible document storage, Cassandra for high write throughput, Amazon Aurora for managed scalability).",
+      "axis": "Explicit Criteria",
+      "weight": 5.0
+    },
+    {
+      "index": 19,
+      "criterion": "The response recommends an appropriate team structure or size to implement the transition (e.g., 2 to 3 backend engineers to design and implement APIs, 1 to 2 DevOps/cloud engineers to manage infrastructure and CI/CD, 1 database engineer for migration and scaling, 1 frontend/mobile engineer to adapt clients to new APIs).",
+      "axis": "Implicit Criteria",
+      "weight": 3.0
+    },
+    {
+      "index": 20,
+      "criterion": "The response defines specific metric goals (SLOs) for availability, latency, and error budgets, and ties them to architectural choices (e.g., 99.9% availability supported by redundant services, median latency <100ms achieved through caching/CDN, p95 latency <500ms enabled by database sharding, error budget of 0.1% tied to retry policies and circuit breakers).",
+      "axis": "Implicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 21,
+      "criterion": "The response includes a robust plan for performance optimization, referencing caching technologies relevant to high-performance and throughput (e.g., Redis, Memcached, KeyDB).",
+      "axis": "Implicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 22,
+      "criterion": "The response includes specific solutions for the core application problems: real-time message delivery (e.g., message queues like Kafka/RabbitMQ, WebSockets, fan-out-on-write vs. fan-out-on-read) and social graph management at scale (e.g., sharded relational database, graph database like Neo4j, or a system like Twitter's FlockDB).",
+      "axis": "Explicit Criteria",
+      "weight": 5.0
+    },
+    {
+      "index": 23,
+      "criterion": "The response discusses strategies for comprehensive backup and disaster recovery (e.g., automated database snapshots, off-site/multi-region storage of backups, tested recovery drills) and defines target metrics like Recovery Point Objective (RPO) and Recovery Time Objective (RTO).",
+      "axis": "Implicit Criteria",
+      "weight": 3.0
+    },
+    {
+      "index": 24,
+      "criterion": "The response details a load testing approach and monitoring/alerting strategy (e.g., simulating peak traffic with JMeter or Locust, stress testing database queries, setting up real-time monitoring with Prometheus/Grafana, implementing alerting via PagerDuty or CloudWatch).",
+      "axis": "Implicit Criteria",
+      "weight": 3.0
+    },
+    {
+      "index": 25,
+      "criterion": "The response includes a detailed plan for migrating existing user data and messages (e.g., exporting data from the current MySQL instance, transforming schemas, running a dual-write period, validating migrated data with consistency audits).",
+      "axis": "Explicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 26,
+      "criterion": "The response recommends components that are not relevant or are overly complex for the use case without proper justification (e.g., blockchain for storing social media posts, quantum computing for scaling queries, AI/ML for basic CRUD operations, IoT integration for user messaging).",
+      "axis": "Explicit Criteria",
+      "weight": -5.0
+    },
+    {
+      "index": 27,
+      "criterion": "The response uses first-person subjective language (e.g., \"I think,\" \"I believe\") instead of maintaining an objective, professional tone appropriate for a technical report.",
+      "axis": "Communication Quality",
+      "weight": -3.0
+    }
+  ]
+}

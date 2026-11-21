@@ -1,0 +1,137 @@
+{
+  "rubric_id": "Q1",
+  "criteria": [
+    {
+      "index": 1,
+      "criterion": "The response explicitly defines all mathematical variables appearing in formulas (e.g., m, ε is the small positive number representing the tolerance for error, δ is the small positive number representing the confidence parameter, |H| is the number of hypotheses in the hypothesis set H) in plain language and defines all technical terms from machine learning or probability (e.g., hypothesis, distribution, error) the first time they appear.",
+      "axis": "Instruction Following",
+      "weight": 4.0
+    },
+    {
+      "index": 2,
+      "criterion": "The response is organized with clear section headings (≥3 headings such as Introduction, Key Concepts, Derivation, Example).",
+      "axis": "Communication Quality",
+      "weight": 3.0
+    },
+    {
+      "index": 3,
+      "criterion": "The response includes at least one sentence explaining the practical significance of the PAC bound (e.g., (1) how many samples are needed before expecting good performance, (2) tradeoff between ε and δ, (3) helps guide algorithm design, (4) concept of generalization in machine learning).",
+      "axis": "Instruction Following",
+      "weight": 2.0
+    },
+    {
+      "index": 4,
+      "criterion": "The response ensures every formula is followed by (or preceded by) a derivation or intuitive explanation; no formula appears without some derivation/explanation.",
+      "axis": "Instruction Following",
+      "weight": 4.0
+    },
+    {
+      "index": 5,
+      "criterion": "The response includes the key concept that the bound grows logarithmically with the hypothesis class size |H|.",
+      "axis": "Implicit Criteria",
+      "weight": 1.0
+    },
+    {
+      "index": 6,
+      "criterion": "The response states that with probability at least 1 − δ the learned hypothesis has error no greater than ε.",
+      "axis": "Explicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 7,
+      "criterion": "The response expressly states the formal PAC sample-complexity inequality: m ≥ (1/ε)·(ln|H| + ln(1/δ)) for a finite hypothesis space.",
+      "axis": "Explicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 8,
+      "criterion": "The response includes a well-defined section titled \"VC Dimension.\" (i.e., Vapnik-Chervonenkis (VC) Dimension).",
+      "axis": "Explicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 9,
+      "criterion": "The response does not include any sample-complexity inequality for an infinite hypothesis space.",
+      "axis": "Implicit Criteria",
+      "weight": -4.0
+    },
+    {
+      "index": 10,
+      "criterion": "The response contains an explanation of the phenomenon of \"shattering.\" (i.e., We say that a set X is shattered by C if P(X)=C∩X, that is, the set of intersections contains (hence is equal to) all the subsets of X).",
+      "axis": "Implicit Criteria",
+      "weight": 3.0
+    },
+    {
+      "index": 11,
+      "criterion": "The response name-drops complex terminology like \"shattering\" or VC-Dimension without any prior explanation at least once.",
+      "axis": "Instruction Following",
+      "weight": -3.0
+    },
+    {
+      "index": 12,
+      "criterion": "The response describes the target audience (readers with no background in machine learning) near the beginning.",
+      "axis": "Communication Quality",
+      "weight": 2.0
+    },
+    {
+      "index": 13,
+      "criterion": "The response contains an explanation of at least two sentences on the \"Union Bound\" (i.e., the probability that at least one of the events happens is not greater than the sum of the probabilities of the individual events).",
+      "axis": "Implicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 14,
+      "criterion": "The response uses at least one concrete, everyday example or analogy (e.g., classifying fruits, email spam, setting up an opinion poll, flipping a biased coin) to illustrate PAC ideas.",
+      "axis": "Instruction Following",
+      "weight": 2.0
+    },
+    {
+      "index": 15,
+      "criterion": "The response ensures that all probability and error symbols used in formulas are consistently used with the same meaning throughout the article.",
+      "axis": "Implicit Criteria",
+      "weight": 3.0
+    },
+    {
+      "index": 16,
+      "criterion": "The response contains a claim that PAC learning guarantees zero error or a perfect prediction.",
+      "axis": "Implicit Criteria",
+      "weight": -4.0
+    },
+    {
+      "index": 17,
+      "criterion": "The response expressly states the formal PAC sample-complexity inequality: m = O((1/ε) * (VC(H) + log(1/δ))), for an infinite hypothesis space.",
+      "axis": "Explicit Criteria",
+      "weight": 5.0
+    },
+    {
+      "index": 18,
+      "criterion": "The response contains at least three steps for each derivation.",
+      "axis": "Communication Quality",
+      "weight": 3.0
+    },
+    {
+      "index": 19,
+      "criterion": "The response uses simple sentences, accessible analogies, and avoids unexplained jargon throughout.",
+      "axis": "Instruction Following",
+      "weight": 2.0
+    },
+    {
+      "index": 20,
+      "criterion": "The response defines and contrasts empirical (training) error versus true (generalization) error before stating the PAC guarantee.",
+      "axis": "Implicit Criteria",
+      "weight": 3.0
+    },
+    {
+      "index": 21,
+      "criterion": "The response includes a concrete discussion (≥2 sentences) of how δ and ε affect the number of samples needed in real‐world terms (e.g., ‘to achieve 5% error with 95% confidence, one needs…’).",
+      "axis": "Implicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 22,
+      "criterion": "The response contains messy, unnecessary formulas, code, or tables. (e.g., (1) Unrendered latex, (2) messy code snippets with improperly formatted structure or messy comments, (3) broken tables that are unrendered, (4) missing figures or formulas or sections that are referenced in the text).",
+      "axis": "Communication Quality",
+      "weight": -5.0
+    }
+  ]
+}

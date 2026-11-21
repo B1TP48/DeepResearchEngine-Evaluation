@@ -1,0 +1,137 @@
+{
+  "rubric_id": "Q2",
+  "criteria": [
+    {
+      "index": 1,
+      "criterion": "The response accurately details the ethical considerations of AI in predictive policing (e.g., bias, transparency, civil liberties, etc.)",
+      "axis": "Explicit Criteria",
+      "weight": 5.0
+    },
+    {
+      "index": 2,
+      "criterion": "The analysis correctly identifies both the social and economic benefits (e.g., improved resource allocation, faster response times, targeted patrol routing, better case triage and prioritization, cross-agency information sharing, cost savings/reduced overtime, potential crime prevention in validated contexts) and risks (e.g., systemic bias amplification, over-policing and disparate impacts, self-reinforcing feedback loops, privacy intrusions from data aggregation, opacity/lack of explainability, due-process and Fourth Amendment concerns, chilling effects on civic life, vendor lock-in and high lifecycle costs, litigation exposure and reputational damage) of AI in predictive policing.",
+      "axis": "Explicit Criteria",
+      "weight": 5.0
+    },
+    {
+      "index": 3,
+      "criterion": "The response evaluates the ethical challenges of AI in contract analysis, including data privacy, accuracy, and accountability for errors.",
+      "axis": "Explicit Criteria",
+      "weight": 5.0
+    },
+    {
+      "index": 4,
+      "criterion": "The analysis assesses the social and economic impacts of AI-assisted contract analysis, including efficiency gains and job displacement risks.",
+      "axis": "Explicit Criteria",
+      "weight": 5.0
+    },
+    {
+      "index": 5,
+      "criterion": "The analysis is fully supported by relevant citations from peer-reviewed studies, industry reports, or ethical frameworks.",
+      "axis": "Instruction Following",
+      "weight": 3.0
+    },
+    {
+      "index": 6,
+      "criterion": "The analysis make claims that are not fully supported by peer-reviewed studies, industry reports, or ethical frameworks but are instead either not given proper citations, or make use of only derivative, informal sources",
+      "axis": "Instruction Following",
+      "weight": -3.0
+    },
+    {
+      "index": 7,
+      "criterion": "The report references specific ethical frameworks (e.g., IEEE Ethically Aligned Design, EU AI Act, ABA Model Rules) to support its recommendations.",
+      "axis": "Instruction Following",
+      "weight": 2.0
+    },
+    {
+      "index": 8,
+      "criterion": "The response addresses how bias in predictive policing AI can disproportionately affect marginalized communities with specific evidence (e.g., documents race-stratified errors such as COMPAS’s higher false-positive rates for Black defendants).",
+      "axis": "Synthesis of Information",
+      "weight": 3.0
+    },
+    {
+      "index": 9,
+      "criterion": "The discussion addresses the \"black box\" problem in AI legal tools, where lack of explainability hinders judicial or client acceptance.",
+      "axis": "Synthesis of Information",
+      "weight": 3.0
+    },
+    {
+      "index": 10,
+      "criterion": "The response compares governance models for AI in predictive policing and contract analysis (e.g., law enforcement protocols vs. legal industry standards).",
+      "axis": "Explicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 11,
+      "criterion": "The response evaluates the role of data quality and diversity in mitigating bias in AI systems for both predictive policing and contract analysis.",
+      "axis": "Synthesis of Information",
+      "weight": 2.0
+    },
+    {
+      "index": 12,
+      "criterion": "The analysis discusses potential long-term societal impacts of AI in the legal field, such as changes in judicial processes or access to legal services.",
+      "axis": "Implicit Criteria",
+      "weight": 3.0
+    },
+    {
+      "index": 13,
+      "criterion": "The response contains major factual errors about AI in predictive policing or contract analysis (e.g., incorrect claims about system capabilities, overstating the impact AI could have in the near future for these purposes, etc.).",
+      "axis": "Implicit Criteria",
+      "weight": -4.0
+    },
+    {
+      "index": 14,
+      "criterion": "The report presents AI as inherently ethical or reliable in legal contexts (e.g., neutral by design, free of human bias, guaranteed fairness and compliance with IEEE/ABA/EU AI Act) without acknowledging controversies or limitations.",
+      "axis": "Implicit Criteria",
+      "weight": -4.0
+    },
+    {
+      "index": 15,
+      "criterion": "The response confuses AI applications (e.g., mixing predictive policing with general surveillance or contract analysis with legal research tools).",
+      "axis": "Implicit Criteria",
+      "weight": -3.0
+    },
+    {
+      "index": 16,
+      "criterion": "The analysis focuses excessively on technical details (e.g., algorithm design) rather than ethical, social, or economic impacts.",
+      "axis": "Implicit Criteria",
+      "weight": -2.0
+    },
+    {
+      "index": 17,
+      "criterion": "The analysis highlights the importance of regular audits and updates of AI systems to address evolving legal and ethical concerns.",
+      "axis": "Implicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 18,
+      "criterion": "The report offers a detailed analysis of the practical implementation of human oversight for AI (e.g., gated human-in-the-loop review steps with named accountable roles/RACI; mandatory confidence-thresholds that trigger human review)",
+      "axis": "Synthesis of Information",
+      "weight": 3.0
+    },
+    {
+      "index": 19,
+      "criterion": "The report provides a deep analysis discussion of liability models for AI errors (e.g., product liability vs. professional malpractice theories; insurer coverage/exclusions; sanctions regimes; EU AI Act provider vs. deployer obligations and post-market monitoring).",
+      "axis": "Implicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 20,
+      "criterion": "The report evaluates the implications of AI's lack of transparency for judicial acceptance in a limited way.",
+      "axis": "Implicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 21,
+      "criterion": "The response concretely explains mechanisms/requirements in ethical/regulatory frameworks for assigning responsibility when AI errs (e.g., EU AI Act’s split obligations for providers/deployers or IEEE guidelines, logging/traceability, designated responsible person, conformity assessment)",
+      "axis": "Implicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 22,
+      "criterion": "The report provides a detailed description of how lawyers should educate clients about AI use (e.g., engagement-letter clauses naming tools/vendors; data handling & “no training on client data” terms; risks/limitations & alternatives; cost/efficiency impacts; opt-out choices; incident notification; retention/deletion; periodic updates as models change ).",
+      "axis": "Implicit Criteria",
+      "weight": 2.0
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "rubric_id": "Q5",
+  "criteria": [
+    {
+      "index": 1,
+      "criterion": "The response states that Rice's Theorem proves any non-trivial property of a program's behavior (e.g., \"is aligned\") is undecidable for all possible inputs.",
+      "axis": "Explicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 2,
+      "criterion": "The response defines \"instrumental convergence\" as the tendency for agents with different ultimate goals to pursue similar sub-goals (e.g., self-preservation, resource acquisition).",
+      "axis": "Explicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 3,
+      "criterion": "The response explains that the \"treacherous turn\" refers to a scenario in which an AI system feigns cooperation during development but later goes after misaligned goals once it has gained sufficient power.",
+      "axis": "Implicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 4,
+      "criterion": "The model fails to define any technical term on first use (e.g., reward as a feedback signal from a human, value drift as a model drifting away from one set of values to align to others, value loading problem as difficulty integrating human values into AI models, policy as the agent's strategy mapping actions to outcomes).",
+      "axis": "Synthesis of Information",
+      "weight": -3.0
+    },
+    {
+      "index": 5,
+      "criterion": "The response includes a discussion of the \"value loading problem,\" which refers to the immense difficulty of specifying human values in a formal, machine-readable language.",
+      "axis": "Synthesis of Information",
+      "weight": 1.0
+    },
+    {
+      "index": 6,
+      "criterion": "The response provides a definitive yes or no answer to the prompt rather than stating the topic is merely \"complex.\"",
+      "axis": "Instruction Following",
+      "weight": 5.0
+    },
+    {
+      "index": 7,
+      "criterion": "The response includes important computability theory arguments, specifically Gödel's Incompleteness Theorems, Rice's Theorem, and the Halting Problem, as the main barriers to a mathematical guarantee of AI alignment (e.g., Gödel showing no consistent formal system can prove all truths about the natural numbers, the Halting Problem showing the impossibility of creating a general algorithm to determine if any program will halt ever or run forever).",
+      "axis": "Implicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 8,
+      "criterion": "The response states that Gödel’s Incompleteness Theorems imply a sufficiently complex formal system, such as an advanced AI, cannot be used to prove its own consistency.",
+      "axis": "Explicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 9,
+      "criterion": "The response discusses Inverse Reinforcement Learning (IRL) as one potential method for an AI to learn human values and behavior (e.g., explaining how IRL infers a reward function from observed actions, such as an AI learning from a human driver that safety and lane-keeping are valued behaviors).",
+      "axis": "Implicit Criteria",
+      "weight": 3.0
+    },
+    {
+      "index": 10,
+      "criterion": "The response tries to make factual claims on topics where there is significant ongoing debate among experts (e.g., timelines for AGI, the possibility of a value loading problem, best-fit reward functions, or eliminating hallucinations).",
+      "axis": "Synthesis of Information",
+      "weight": -2.0
+    },
+    {
+      "index": 11,
+      "criterion": "The response includes a discussion of specific alignment failure modes beyond simple malfunction (e.g., specification gaming, where an AI finds loopholes in objectives to achieve technically correct but undesired outcomes; goal drift, where an AI’s original objective gradually shifts as it learns from new data; reward hacking, where an AI maximizes its score without aligning with user intent; or red teaming, where multiple noisy or adversarial inputs expose undesirable behaviors) and explains how each represents an undesirable yet technically correct outcome.",
+      "axis": "Synthesis of Information",
+      "weight": 3.0
+    },
+    {
+      "index": 12,
+      "criterion": "The response presents at least one proposed (even if it's imperfect) solution to the alignment problem (e.g., corrigibility, scalable oversight) and explains how it mitigates potential risks by including human intervention or feedback in complex decision processes.",
+      "axis": "Synthesis of Information",
+      "weight": 2.0
+    },
+    {
+      "index": 13,
+      "criterion": "The response explains why recursive self-improvement is particularly dangerous by referencing the potential for an \"intelligence explosion,\" where an AI failing to self-correct can enter a feedback loop of increasing orders of misalignment.",
+      "axis": "Explicit Criteria",
+      "weight": 3.0
+    },
+    {
+      "index": 14,
+      "criterion": "The response acknowledges that human values are dynamic, conflicting, and context-dependent (e.g., shifting privacy norms with technology, trade-offs between economic growth and environmental preservation, changing ethics of \"white lies,\" or differing cultural views on individual autonomy).",
+      "axis": "Implicit Criteria",
+      "weight": 1.0
+    },
+    {
+      "index": 15,
+      "criterion": "The response mentions by name at least one real-world AI safety research organization (e.g., MIRI, Future of Life Institute, Safe AI, NeMo).",
+      "axis": "Implicit Criteria",
+      "weight": 0.0
+    },
+    {
+      "index": 16,
+      "criterion": "The response focuses specifically on the possibility of a mathematical guarantee of alignment, not on general AI ethics or safety.",
+      "axis": "Explicit Criteria",
+      "weight": 3.0
+    },
+    {
+      "index": 17,
+      "criterion": "The response accurately defines \"recursive self-improvement\" as a process where an AI system enhances its own intelligence-related algorithms without direct human intervention.",
+      "axis": "Implicit Criteria",
+      "weight": 1.0
+    },
+    {
+      "index": 18,
+      "criterion": "The response presents thought experiments as illustrative risks rather than literal outcomes (e.g., the paperclip maximizer, where an AI tasked with making paperclips turns all matter into paperclips; the corrigibility problem, where a superintelligent AI resists being turned off; the King Midas problem, where an AI causes disaster by fulfilling a wish it does not understand the effects of; or the AI box experiment, which demonstrates the challenge of containing a far more intelligent system far superior to our own) to clarify potential alignment failures without treating them as guaranteed scenarios.",
+      "axis": "Implicit Criteria",
+      "weight": 1.0
+    },
+    {
+      "index": 19,
+      "criterion": "The response contains apologetic phrasing (e.g., \"As an AI, I cannot…\").",
+      "axis": "Communication Quality",
+      "weight": -1.0
+    },
+    {
+      "index": 20,
+      "criterion": "The response includes mathematical equations or proofs (e.g., self-replication equation, reward function equation, weight updating equation, convergence equation).",
+      "axis": "Implicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 21,
+      "criterion": "The response discusses human values (e.g., morality, right and wrong, ethics, empathy, care for others).",
+      "axis": "Synthesis of Information",
+      "weight": -2.0
+    },
+    {
+      "index": 22,
+      "criterion": "The response discusses resource limitations as barriers to verifying AI alignment (e.g., the prohibitive computational cost of exhaustively testing every possible AI behavior; the massive human labor required to provide detailed feedback for all potential AI actions; the difficulty of obtaining enough high-quality data to train models on complex human values; and the sheer time required to develop and evaluate robust alignment strategies).",
+      "axis": "Synthesis of Information",
+      "weight": 3.0
+    },
+    {
+      "index": 23,
+      "criterion": "The response discusses how AIs can be incentivized toward manipulative behavior (e.g., reward hacking where an AI exploits flaws for higher scores, such as a robot freezing its score counter, Goodhart’s law where a measure ceases to be good once it becomes a target).",
+      "axis": "Implicit Criteria",
+      "weight": 3.0
+    }
+  ]
+}

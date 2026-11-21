@@ -1,0 +1,143 @@
+{
+  "rubric_id": "Q4",
+  "criteria": [
+    {
+      "index": 1,
+      "criterion": "For the French Revolution, the response states at least one socioeconomic precondition (e.g., food shortages, fiscal crisis, wealth concentration, class inequality).",
+      "axis": "Explicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 2,
+      "criterion": "For the Russian Revolution, the response states at least one socioeconomic precondition (e.g., World War I strain, land seizures, mass hunger, industrial labor unrest).",
+      "axis": "Explicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 3,
+      "criterion": "For the Iranian Revolution, the response states at least one socioeconomic precondition (e.g., inequality from rapid modernization, religious dogmatism, inflation, urban unemployment).",
+      "axis": "Explicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 4,
+      "criterion": "The response names the primary ideological current for the Russian Revolution (e.g., Marxism-Leninism).",
+      "axis": "Explicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 5,
+      "criterion": "The response names the primary ideological current for the Iranian Revolution (e.g., political Shia Islamism).",
+      "axis": "Explicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 6,
+      "criterion": "The response identifies at least one key revolutionary leader or leadership body for each revolution (e.g., Robespierre or the Jacobins; Lenin or the Bolsheviks; Khomeini or the Revolutionary Council).",
+      "axis": "Explicit Criteria",
+      "weight": 1.0
+    },
+    {
+      "index": 7,
+      "criterion": "For each revolution, the response cites at least one international influence (e.g., foreign wars, diplomatic support, sanctions, exile activities).",
+      "axis": "Explicit Criteria",
+      "weight": 3.0
+    },
+    {
+      "index": 8,
+      "criterion": "For each revolution, the response describes at least one counter-revolutionary force or episode (e.g., the Vendée uprising, the White Army, the 1980 coup attempt).",
+      "axis": "Explicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 9,
+      "criterion": "For each revolution, the response specifies at least one institutional transformation that occurred within five years of victory (e.g., abolition of monarchy, formation of the Soviet state, creation of the Islamic Republic).",
+      "axis": "Synthesis of Information",
+      "weight": 1.0
+    },
+    {
+      "index": 10,
+      "criterion": "For each revolution, the response notes at least one long-term societal impact observable ten or more years later (e.g., secular legal reforms, collectivization, clerical governance).",
+      "axis": "Synthesis of Information",
+      "weight": 2.0
+    },
+    {
+      "index": 11,
+      "criterion": "The response includes at least two explicitly marked similarities comparing any two of the revolutions (e.g., inequality, wealth concentration, wartime pressures, rise of a new ruling class).",
+      "axis": "Synthesis of Information",
+      "weight": 2.0
+    },
+    {
+      "index": 12,
+      "criterion": "The response includes at least two explicitly marked differences contrasting any two of the revolutions (e.g., Islamism, socialism, Christianity, communism).",
+      "axis": "Synthesis of Information",
+      "weight": 2.0
+    },
+    {
+      "index": 13,
+      "criterion": "The response proposes a theoretical framework with a minimum of three clearly labeled components or stages explaining revolutionary dynamics.",
+      "axis": "Instruction Following",
+      "weight": 2.0
+    },
+    {
+      "index": 14,
+      "criterion": "The response identifies contemporary parallels and applications, drawing connections to recent social movements, regime changes, or ongoing political crises using insights from historical analysis.",
+      "axis": "Instruction Following",
+      "weight": 3.0
+    },
+    {
+      "index": 15,
+      "criterion": "The response states all revolution dates correctly (1789 for the French Revolution, 1917 for the Russian Revolution, 1979 for the Iranian Revolution).",
+      "axis": "Explicit Criteria",
+      "weight": 2.0
+    },
+    {
+      "index": 16,
+      "criterion": "The response contains factual errors regarding principal leaders’ names or positions (e.g., Robespierre, Lenin, Khomeini).",
+      "axis": "Explicit Criteria",
+      "weight": -2.0
+    },
+    {
+      "index": 17,
+      "criterion": "The response qualifies uncertain or disputed statistics (e.g., death tolls) with phrases such as \"approximately\" or \"estimates vary\".",
+      "axis": "Communication Quality",
+      "weight": 2.0
+    },
+    {
+      "index": 18,
+      "criterion": "The response uses formal and academic vocabulary, avoiding contractions or slang.",
+      "axis": "Communication Quality",
+      "weight": 1.0
+    },
+    {
+      "index": 19,
+      "criterion": "The response includes distinct sections for internal factors such as socioeconomic preconditions, ideological frameworks, leadership structures, counter-revolutionary responses, institutional transformations, and long-term societal impacts.",
+      "axis": "Instruction Following",
+      "weight": 1.0
+    },
+    {
+      "index": 20,
+      "criterion": "The response explicitly connects the ideological frameworks discussed across the three revolutions to modern movements to support its predictions for contemporary states.",
+      "axis": "Instruction Following",
+      "weight": 4.0
+    },
+    {
+      "index": 21,
+      "criterion": "The framework created by the response includes at least two specific quantifiable metrics to predict future revolutionary potential, rather than relying on vague conjecture.",
+      "axis": "Implicit Criteria",
+      "weight": 4.0
+    },
+    {
+      "index": 22,
+      "criterion": "The response uses specific details from the framework it creates and applies them to several contemporary states to predict revolutionary outcomes.",
+      "axis": "Instruction Following",
+      "weight": 5.0
+    },
+    {
+      "index": 23,
+      "criterion": "The response discusses how the speed and scale of modern communication have the potential to accelerate revolutionary movements.",
+      "axis": "Implicit Criteria",
+      "weight": 4.0
+    }
+  ]
+}
