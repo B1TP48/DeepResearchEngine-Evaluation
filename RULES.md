@@ -90,8 +90,18 @@ Added for this review:
 - The request each document answered is not given to you. Where a criterion refers to
   the request (its audience, sections or items it asked for, things to avoid), judge it
   from what the document itself shows.
-- You may use your own knowledge to judge whether a statement, number or formula in the
-  document is correct. Do not consult any outside source.
+- Do not use your own knowledge to decide whether a statement in the document is true or
+  false. A grader's knowledge can be out of date or wrong, and it differs from grader to
+  grader. Judge correctness only against two references:
+  1. this rubric: the criterion's text and examples, and the facts stated in the
+     rubric's other criteria;
+  2. the document itself, where it contradicts itself.
+
+  For a criterion about errors in general (for example "contains major factual errors"),
+  count only an error that one of these two references shows. If neither shows one, the
+  failure is not shown. Do not consult any outside source either.
+- Recognizing that the document says what a criterion asks for in other words, other
+  notation or an equivalent form is reading, not fact-checking, and is expected.
 - The documents are Markdown meant to be rendered. Markdown syntax, and math inside
   `\( \)`, `\[ \]`, `$ $` or `$$ $$`, count as rendered formatting.
 - Do not search the web or look up the documents, the rubrics, or their origin.
