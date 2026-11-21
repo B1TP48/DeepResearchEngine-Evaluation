@@ -6,8 +6,10 @@ Checks every pair in pairs.csv: the file exists; every line is a JSON object wit
 the fields of RULES.md; every combination of the pair's two reports and the rubric's
 criteria appears once; verdict and score agree; confidence is in [0, 1]; and every
 evidence quote occurs in the report (ignoring case, whitespace, Markdown emphasis and
-quote styles; "..." splits a quote into parts that must each occur). Missing quotes on a
-verdict that needs one are warnings. Exit status 1 when any error is found.
+quote styles; "..." splits a quote into parts that must each occur; a link may be quoted
+by its text or its URL). Errors name the pair, line, report and criterion, so only the
+affected grades need redoing. Missing quotes on a verdict that needs one, and missing
+elements listed on a Satisfied verdict, are warnings. Exit status 1 when any error is found.
 """
 import csv
 import json
@@ -23,23 +25,34 @@ QUOTE_CHARS = str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"',
                              "–": "-", "—": "-", " ": " "})
 
 
-def norm(text: str) -> str:
+def norm(text: str, links: str = "text") -> str:
+    """Normalize for quote matching. links="text" keeps a Markdown link's text only;
+    links="both" keeps its text and its URL, so a quoted URL also matches."""
     text = text.translate(QUOTE_CHARS)
+    text = re.sub(r"\[([^\]]*)\]\(([^)]*)\)", r"\1 \2" if links == "both" else r"\1", text)
     text = re.sub(r"[*_`#>]", "", text)
-    text = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", text)  # keep link text, drop targets
     return re.sub(r"\s+", " ", text).strip().lower()
 
 
-def quote_found(quote: str, report_norm: str) -> bool:
-    parts = [norm(p) for p in re.split(r"\.\.\.|…|\[\.\.\.\]", quote)]
-    parts = [p.strip(" .,;:") for p in parts]
-    parts = [p for p in parts if len(p) >= 4]
-    if not parts:
-        return True
-    return all(p in report_norm for p in parts)
+def quote_found(quote: str, report_variants: tuple[str, ...]) -> bool:
+    for mode in ("text", "both"):
+        parts = [norm(p, mode) for p in re.split(r"\.\.\.|…|\[\.\.\.\]", quote)]
+        parts = [p.strip(" .,;:") for p in parts]
+        parts = [p for p in parts if len(p) >= 4]
+        if not parts:
+            return True
+        if any(all(p in variant for p in parts) for variant in report_variants):
+            return True
+    return False
 
 
 def main() -> int:
+    # Quotes contain characters such as ε or ≥; a Windows console (cp1252) would crash on them.
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except (AttributeError, ValueError):
+            pass
     if len(sys.argv) != 2:
         print(__doc__)
         return 2
@@ -51,7 +64,10 @@ def main() -> int:
     with open(ROOT / "pairs.csv", encoding="utf-8", newline="") as f:
         pairs = list(csv.DictReader(f))
     rubrics = {p.stem: json.loads(p.read_text(encoding="utf-8")) for p in (ROOT / "rubrics").glob("*.json")}
-    reports = {p.stem: norm(p.read_text(encoding="utf-8")) for p in (ROOT / "reports").glob("*.md")}
+    reports = {}
+    for p in (ROOT / "reports").glob("*.md"):
+        raw = p.read_text(encoding="utf-8")
+        reports[p.stem] = (norm(raw, "text"), norm(raw, "both"))
 
     if not (out_dir / "_meta.json").is_file():
         warnings.append(f"{out_dir.relative_to(ROOT)}/_meta.json is missing (write it before pushing)")
@@ -115,14 +131,17 @@ def main() -> int:
             if isinstance(row["evidence_quotes"], list):
                 for q in row["evidence_quotes"]:
                     if isinstance(q, str) and not quote_found(q, reports[row["report_id"]]):
-                        bad(f"evidence quote not found in {row['report_id']}: {q[:80]!r}")
+                        bad(f"report {row['report_id']} criterion {idx}: evidence quote not found: {q[:80]!r}")
                 if verdict in SCORES and verdict != "Not Satisfied" and not row["evidence_quotes"]:
                     warnings.append(f"{where}: {verdict} on criterion {idx} without an evidence quote")
+            if verdict == "Satisfied" and isinstance(row["missing_elements"], list) and row["missing_elements"]:
+                warnings.append(f"{where}: Satisfied on criterion {idx} but missing_elements is not empty")
         expected = {(r, i) for r in members for i in criteria}
         missing = sorted(expected - set(seen))
         if missing:
             pair_errors += 1
-            errors.append(f"{pid}: {len(missing)} grade(s) missing, e.g. report {missing[0][0]} criterion {missing[0][1]}")
+            listed = ", ".join(f"report {r} criterion {i}" for r, i in missing[:10])
+            errors.append(f"{pid}: {len(missing)} grade(s) missing: {listed}{' ...' if len(missing) > 10 else ''}")
         if pair_errors == 0:
             complete += 1
 

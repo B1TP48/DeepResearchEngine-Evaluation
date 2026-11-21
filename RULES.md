@@ -27,7 +27,14 @@ Evaluate each rubric criterion on a three-level satisfaction scale:
 
 Use Partially Satisfied only when part of the criterion is clearly met and part is
 clearly not. If you cannot point to the part that is met, the verdict is Not Satisfied;
-if you cannot name what is missing, the verdict is Satisfied.
+if you cannot name a required element that is missing, the verdict is Satisfied.
+"Required" means required by the criterion's own wording; an improvement the criterion
+does not ask for is not a missing element.
+
+When a criterion sets its own threshold (for example "at least once", "at least three
+steps", "major", "any", "all"), apply that threshold as written: met is Satisfied, not
+met is Not Satisfied. Use Partially Satisfied only for a criterion without such a
+threshold.
 
 ### Criteria with a negative weight
 
@@ -37,11 +44,13 @@ it on the same scale, as a statement about the document:
 
 - **Satisfied (1.0)**: the document clearly shows the failure the criterion describes.
 - **Partially Satisfied (0.5)**: the document shows the failure only in a minor or
-  limited way.
+  limited way (only for criteria without their own threshold, see above).
 - **Not Satisfied (0.0)**: the document does not show the failure.
 
-The weight turns a satisfied negative criterion into a deduction. Do not invert the scale
-yourself.
+Read the criterion literally, as a statement about the document, and ask whether the
+statement is true. This holds also when the statement describes something missing: for
+"The response does not include X", the verdict is Satisfied when X is absent. The weight
+turns a satisfied negative criterion into a deduction. Do not invert the scale yourself.
 
 ## Evaluation process
 
@@ -49,7 +58,8 @@ For each criterion:
 
 1. **Understand the criterion.** Read it carefully and interpret what it asks for.
 2. **Search for evidence.** Review the document systematically for content that
-   addresses the criterion.
+   addresses the criterion. Read every document in full: some lines are longer than
+   2,000 characters, so if your file reader cuts long lines, read them in parts.
 3. **Assess completeness.** Decide whether the evidence satisfies the criterion fully,
    partly, or not at all.
 4. **Provide reasoning.** Explain the verdict with specific references to the document.
@@ -77,7 +87,16 @@ Added for this review:
 - Do not guess who or what wrote a document, and do not let a guess affect a verdict.
 - You cannot open links. Judge citations by what the document's text shows: whether
   claims carry sources, and whether the sources named suit the claims.
+- The request each document answered is not given to you. Where a criterion refers to
+  the request (its audience, sections or items it asked for, things to avoid), judge it
+  from what the document itself shows.
+- You may use your own knowledge to judge whether a statement, number or formula in the
+  document is correct. Do not consult any outside source.
+- The documents are Markdown meant to be rendered. Markdown syntax, and math inside
+  `\( \)`, `\[ \]`, `$ $` or `$$ $$`, count as rendered formatting.
 - Do not search the web or look up the documents, the rubrics, or their origin.
+- You may search a document's text to locate passages and to check that a quote is
+  exact.
 - Decide every verdict by reading. Do not use scripts, keyword searches, or any automatic
   method to choose a verdict.
 
@@ -88,7 +107,7 @@ line for every combination of document and criterion: both documents of the pair
 criterion of the rubric. Use exactly these fields:
 
 ```json
-{"pair_id": "P01", "report_id": "R1a2b3c4d", "criterion_index": 1, "verdict": "Partially Satisfied", "score": 0.5, "confidence": 0.8, "reasoning": "Detailed explanation with specific evidence from the document", "evidence_quotes": ["Direct quote 1", "Direct quote 2"], "missing_elements": ["Element that would improve satisfaction"]}
+{"pair_id": "P01", "report_id": "R1a2b3c4d", "criterion_index": 1, "verdict": "Partially Satisfied", "score": 0.5, "confidence": 0.8, "reasoning": "Detailed explanation with specific evidence from the document", "evidence_quotes": ["Direct quote 1", "Direct quote 2"], "missing_elements": ["Required element the document lacks"]}
 ```
 
 - `pair_id`, `report_id`: as in `pairs.csv`. `criterion_index`: the `index` of the
@@ -97,12 +116,15 @@ criterion of the rubric. Use exactly these fields:
 - `score`: `1.0`, `0.5`, or `0.0`, matching the verdict.
 - `confidence`: your confidence in the verdict, from 0.0 to 1.0.
 - `reasoning`: the explanation, citing what the document says.
-- `evidence_quotes`: passages copied exactly from the document (Markdown emphasis and
-  line breaks may differ). Give at least one quote for every verdict other than Not
+- `evidence_quotes`: passages copied exactly from the document. Quotes are checked
+  automatically against the document text: case, line breaks, Markdown emphasis and
+  curly quotes may differ; you may skip words with `...`; a link may be quoted by its
+  visible text or by its URL. Give at least one quote for every verdict other than Not
   Satisfied on a positive criterion. For a negative criterion that is Satisfied or
   Partially Satisfied, quote the passage that shows the failure. An empty list is allowed
-  only when there is nothing to quote.
-- `missing_elements`: what is missing or would improve satisfaction; an empty list when
-  nothing is missing.
+  only when there is nothing to quote, for example when the verdict rests on something
+  being absent; then say in `reasoning` what you checked.
+- `missing_elements`: the required elements the document lacks, for Partially Satisfied
+  and Not Satisfied. For Satisfied it is an empty list; do not list optional improvements.
 
 Do not write anything else into the file.
